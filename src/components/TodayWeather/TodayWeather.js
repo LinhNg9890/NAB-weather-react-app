@@ -16,8 +16,9 @@ const TodayWeather = (props) => {
         </div>
         <div className="row todayTemp justify-content-left">
           <img src={weatherIcon} alt="" />
-          <div>{temp}<span className="celsius">&#x2103;</span></div>
+          <div className="display-celsius">{temp}<span className="celsius">&#x2103;</span></div>
         </div>
+        <div className="today">Today</div>
       </div>
     )
 }

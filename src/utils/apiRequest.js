@@ -69,15 +69,6 @@ export const formatDate = (utc, timezone, format) => {
   const dt = new Date(dt_timezone.substr(0, 19));
   if (format === "day") {
     return new dt.getDate();
-  } else if (format === "time") {
-    const hr = parseInt(dt_timezone.substr(11, 2), 0);
-    if (hr === 12) {
-      return "12pm";
-    } else if (hr === 0) {
-      return "12am";
-    } else {
-      return hr > 12 ? hr - 12 + "pm" : hr + "am";
-    }
   } else if (format === "weekday") {
     return dt.toLocaleTimeString("en-us", { weekday: "long" }).split(" ")[0];
   }

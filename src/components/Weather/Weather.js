@@ -47,14 +47,14 @@ const Weather = () => {
         setWeeklyWeatherData(weeklyData)
     }
 
-    const warningBanner = () => {
+    const errorMessage = () => {
         if (weatherData.firstTime) {
           return null;
         }
     
         return (
-          <div className="warningBanner">
-            We couldn’t find any results. Try checking your spelling.
+          <div className="errorMessage">
+            Your target City is not Existed! Please, try again.
           </div>
         );
       }
@@ -107,10 +107,10 @@ const Weather = () => {
                         weatherDescription={weatherData.weatherDescription}
                         weatherIcon={weatherData.weatherIcon}
                     />
-                    <WeeklyWeather weeklyData={weeklyWeatherData} />
+                    <WeeklyWeather weeklyData={weeklyWeatherData} weekday={weatherData.weekday} />
                 </>
             ):
-                warningBanner()
+                errorMessage()
             }
             
         </div>
