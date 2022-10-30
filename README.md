@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### ABOUT THIS PROJECT
 A project test from NAB.\
-The weather Data can not load from: (https://www.metaweather.com/api/)\
-So The weather Data which is using in this app, loading from : (https://openweathermap.org/)\
+The weather Data can not load from: (https://www.metaweather.com/api/) \
+So The weather Data which is using in this app, loading from : (https://openweathermap.org/) \
 
 Public Weather API:  https://openweathermap.org/api \
 The API gets Today Data: https://openweathermap.org/current \
