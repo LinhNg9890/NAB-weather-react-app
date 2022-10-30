@@ -93,9 +93,6 @@ const Weather = () => {
                     </button>
                 </div>
             </div>
-            <div>
-                
-            </div>
             {weatherDataExisted() ? (
                 <>
                     <TodayWeather

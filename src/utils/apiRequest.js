@@ -30,12 +30,12 @@ export const get3HoursData = (city) => {
       return response.json();
     })
     .then(data =>
-      data.list.map(list => ({
-        max: parseInt(list.main.temp_max, 0),
-        min: parseInt(list.main.temp_min, 0),
-        time: formatDate(list.dt, data.city.timezone, "time"),
-        weekday: formatDate(list.dt, data.city.timezone, "weekday"),
-        weather_icon: getIconUrl(list.weather[0].icon)
+      data.list.map(item => ({
+        max: parseInt(item.main.temp_max, 0),
+        min: parseInt(item.main.temp_min, 0),
+        time: formatDate(item.dt, data.city.timezone, "time"),
+        weekday: formatDate(item.dt, data.city.timezone, "weekday"),
+        weather_icon: getIconUrl(item.weather[0].icon)
       }))
     )
     .catch(error => {
@@ -45,16 +45,16 @@ export const get3HoursData = (city) => {
 
 export const getWeeklyData = (forecastWeekly) => {
   let uniqueDay = [];
-  forecastWeekly.map(element => {
-    if (uniqueDay.hasOwnProperty(element.weekday)) {
-      if (element.min < uniqueDay[element.weekday].min) {
-        uniqueDay[element.weekday].min = element.min;
+  forecastWeekly.map(item => {
+    if (uniqueDay.hasOwnProperty(item.weekday)) {
+      if (item.min < uniqueDay[item.weekday].min) {
+        uniqueDay[item.weekday].min = item.min;
       }
-      if (element.max > uniqueDay[element.weekday].max) {
-        uniqueDay[element.weekday].max = element.max;
+      if (item.max > uniqueDay[item.weekday].max) {
+        uniqueDay[item.weekday].max = item.max;
       }
     } else {
-      uniqueDay[element.weekday] = element;
+      uniqueDay[item.weekday] = item;
     }
   });
   return Object.values(uniqueDay);

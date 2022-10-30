@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+.searchBox > input {
+    margin-right: 10px;
+}
+
 .errorMessage {
     margin-top: 1rem;
     text-align: center;
