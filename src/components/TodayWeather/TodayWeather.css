@@ -51,7 +51,18 @@
 }
 
 .todayTemp > img {
-    width: 100px;
+    width: 120px;
+}
+
+.display-celsius > .current {
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: #0A0D66;
+    border: 1px solid #23CACD;
+    border-radius: 4px;
+    padding: 0 3px;
+    margin-left: 5px;
+    font-style: italic;
 }
 
 .today {
