@@ -1,5 +1,6 @@
 //the API from openweathermap
-const API_KEY = "e30be5ac75eef927ddac845dc01c82ac";
+const API_KEY = "32a5bb7b9aa1126387e06acad817149e"; // -- free Data
+// const API_KEY = "e30be5ac75eef927ddac845dc01c82ac"; // -- Error fetch data
 const API_URL_CURRENT = `https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&units=metric`;
 const API_URL_3HOURS = `https://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}&units=metric`;
 
