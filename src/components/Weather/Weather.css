@@ -1,0 +1,10 @@
+.searchBox {
+    display: flex;
+    padding: 0;
+}
+
+.warningBanner {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  

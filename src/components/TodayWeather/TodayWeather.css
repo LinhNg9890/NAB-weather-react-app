@@ -1,0 +1,47 @@
+.weatherData {
+    margin-top: 1% !important;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #23CACD;
+}
+
+.todayTemp {
+    font-size: 4em;
+    font-weight: 400;
+}
+
+.todayCity {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #0A0D66;
+
+}
+
+.todayDay,
+.todayDesc {
+    font-size: 1em;
+    font-weight: 100;
+    color: #0A0D66;
+}
+
+.todayDesc {
+    font-style: italic;
+    text-decoration: overline;
+}
+
+.weatherData,
+.todayCity,
+.todayDay,
+.todayDesc {
+    padding-left: 12px;
+}
+
+.celsius {
+    font-size: 0.4em;
+    margin-top: 12px;
+}
+
+.todayTemp > img {
+    width: 100px;
+}
